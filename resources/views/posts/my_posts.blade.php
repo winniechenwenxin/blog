@@ -28,7 +28,7 @@
                                            <td>
                                                <div class="content">
                                                    <div class="title">
-                                                      <h3>{{$post->txtname}}</h3>
+                                                      <h3>{{$post->post_name}}</h3>
                                                    </div>
                                                    <div class="metas">
                                                        <span class="author">By you</span>
