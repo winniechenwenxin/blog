@@ -8,20 +8,15 @@ Route::group(['middleware' => ['web']], function () {
 
     // post
     Route::group(['prefix' => 'post'], function () {
-        // /post/
-        Route::get('/', 'PostController@getAllPosts');
-        // /post/my
-        Route::get('/my', 'PostController@getOwnPosts');
-        // /post/{id}
-        Route::get('{id}', 'PostController@getPost');
-        Route::post('/create', 'PostController@store');
-        Route::delete('/{post}', 'PostController@deletePosts'); // delete
+        Route::get('/', 'PostController@getAllPosts');  //show all post
+        Route::get('/my', 'PostController@getOwnPosts'); //show own post
+        Route::post('/create', 'PostController@store');  //insert post
+        Route::delete('/{post}', 'PostController@deletePosts'); // delete post
 
-        Route::post('{id}/comment', 'CommentController@store'); // comment
-        //Route::delete('{id}/comment/{comment_id}', 'CommentController@delete'); // delete comment
-        Route::post('{id}/comment/{comment_id}/delete', 'CommentController@delete'); // delete comment
+        Route::get('/{id}', 'CommentController@getPostContent'); //view the content of post & Comment
+        Route::post('{id}/comment', 'CommentController@store'); // add comment
+
     });
-
 
     Route::auth();
 

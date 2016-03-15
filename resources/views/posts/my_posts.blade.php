@@ -41,19 +41,14 @@
                                            <div class="content">
                                               <td>
                                                 <form action="/post/{{ $post->id }}" method="POST">
-                                                {{ csrf_field() }}
-                                                {{ method_field('DELETE') }}
-                                                    <button type="submit" id="delete-post-{{ $post->id }}" class="btn btn-danger">
+                                                {!!csrf_field()!!}
+                                                {!! method_field('DELETE') !!}
+                                                    <button type="submit" id="delete-post-{{ $post->id }}" class="btn btn-outline btn-danger btn-sm">
                                                          <i class="fa fa-btn fa-trash"></i>Delete
                                                     </button>
                                                 </form>
-                                               - - - - - - - - - -
-                                                </div>
-                                                <div class="content">
-                                                  <form action="/comments/{{ $post->id }}" method="POST">
-                                                      {!! csrf_field() !!}
-                                                      <button type="submit" id="id" class="btn btn-danger">view</button>
-                                                  </form>
+
+                                                  <a href="{{url('/post/'.$post->id)}}" class="btn btn-outline btn-info btn-sm">View</a>
                                               </td>
                                            </div>
                                          @endif
