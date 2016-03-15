@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Repositories;
-
 use App\User;
 use App\Post;
 
@@ -23,5 +22,16 @@ class PostRepository
 
         return $tables;
     }
+
+    public function forOwnPost(User $user)
+    {
+         $tables =Post::where('user_id', $user->id)
+            ->orderBy('created_at', 'asc')
+            ->get();
+
+        return $tables;
+    }
+
+
 
 }
