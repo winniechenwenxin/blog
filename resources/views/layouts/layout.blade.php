@@ -98,14 +98,14 @@
                 <ul class="site-menu">
                     <li class="site-menu-category">POSTS</li>
                     <li class="site-menu-item">
-                        <a class="animsition-link" href="{{url('/tasks')}}">
+                        <a class="animsition-link" href="{{url('/post')}}">
                             <i class="site-menu-icon bd-angular" aria-hidden="true"></i>
                             <span class="site-menu-title">All Posts</span>
                         </a>
                     </li>
 
                     <li class="site-menu-item">
-                        <a href="{{url('/mytasks')}}">
+                        <a href="{{url('/post/my')}}">
                             <i class="site-menu-icon wb-file" aria-hidden="true"></i>
                             <span class="site-menu-title">My Posts</span>
                         </a>
