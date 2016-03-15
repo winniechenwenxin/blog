@@ -10,7 +10,8 @@ use DB;
 class CommentRepository
 {
 
-    public function forComment(){
+    public function forComment()
+    {
 
     }
 
