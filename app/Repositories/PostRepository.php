@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\User;
 use App\Post;
-use DB;
+
 
 class PostRepository
 {
@@ -14,13 +14,14 @@ class PostRepository
      * @param  User  $user
      * @return Collection
      */
-    public function forUser()
+    public function forAllPost()
     {
-        $tables=DB::table('tasks')
+
+        $tables = Post::with('user')
             ->orderBy('created_at', 'asc')
             ->get();
+
         return $tables;
     }
-
 
 }
