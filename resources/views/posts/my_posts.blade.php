@@ -83,14 +83,14 @@
                     <h4 class="modal-title">Create New Topic</h4>
                 </div>
                 <div class="modal-body container-fluid">
-                    <form action="/post" method="POST" class="form-horizontal">
+                    <form action="/post/create" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
                                 <!-- Task Name -->
                         <div class="form-group">
                             <label for="post-name" class="col-sm-3 control-label">Post</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="txtname" id="post-name" class="form-control" value="{{ old('post') }}">
+                                <input type="text" name="post_name" id="post-name" class="form-control" value="{{ old('post') }}">
                             </div>
                         </div>
                         <!--Task txt-->
@@ -98,7 +98,7 @@
                             <label for="post-name" class="col-sm-3 control-label">Content</label>
 
                             <div class="col-sm-6">
-                                <textarea name="txt" id="post-txt" class="form-control" rows="10" ></textarea>
+                                <textarea name="post_content" id="post-txt" class="form-control" rows="10" ></textarea>
                             </div>
                         </div>
 
