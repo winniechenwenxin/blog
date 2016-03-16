@@ -44,7 +44,7 @@
                         </table>
 
                         <div class="modal-body container-fluid">
-                            <hr>
+
                             <form action="/post/{{$content->id}}/comment" method="POST">
                                 {{ csrf_field() }}
                                         <!--comment txt-->

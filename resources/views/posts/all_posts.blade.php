@@ -4,15 +4,15 @@
     <div class="page bg-white animsition">
         <!-- Forum Content -->
         <div class="page-main">
-            <div class="panel panel-default">
-                <!-- Forum Content Header -->
-                <div class="page-header">
-                    <h1>All Posts</h1>
-                </div>
+            {{--<div class="panel panel-default">--}}
+                    <!-- Forum Content Header -->
+            <div class="page-header">
+                <h1>All Posts</h1>
             </div>
+            {{--</div>--}}
 
 
-            <!-- Current Tasks -->
+                    <!-- Current Tasks -->
             @if (count($posts) > 0)
 
 
@@ -20,28 +20,24 @@
 
                     <div class="tab-pane animation-fade active" id="forum-newest" role="tabpanel">
 
-                        <table class="table is-indent">
-                            <tbody>
-                            @foreach ($posts as $post)
-                                <tr>
-                                    <td>
-                                        <div class="content">
-                                            <div class="title">
-                                                <h3>{{$post->post_name}}</h3>
-                                            </div>
-                                            <div class="metas">
-                                                <span class="author">By {{$post->user->name}}</span>
-                                                <span class="started">Created at {{$post->created_at}} </span>
-                                            </div>
+                        @foreach ($posts as $post)
+                            <div class="container-fluid">
+                                <hr>
+                                <div class="row">
+                                    <div class="col-xs-8">
+                                        <h3>{!!$post->post_name!!}
+                                            <a href="{{url('/post/'.$post->id)}}"
+                                               class="btn btn-outline btn-info btn-md">View
+                                            </a>
+                                        </h3>
+                                        <div class="metas">
+                                            <span class="author">By {{$post->user->name}}</span>
+                                            <span class="started">Created at {{$post->created_at}} </span>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <a href="{{url('/post/'.$post->id)}}" class="btn btn-outline btn-info">View</a>
-                                    </td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             @endif
@@ -71,7 +67,8 @@
                             <label for="post-name" class="col-sm-3 control-label">Post</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="post_name" id="post-name" class="form-control" value="{{ old('post') }}">
+                                <input type="text" name="post_name" id="post-name" class="form-control"
+                                       value="{{ old('post') }}">
                             </div>
                         </div>
                         <!--Task txt-->
@@ -79,10 +76,9 @@
                             <label for="post-name" class="col-sm-3 control-label">Content</label>
 
                             <div class="col-sm-6">
-                                <textarea name="post_content" id="post-txt" class="form-control" rows="10" ></textarea>
+                                <textarea name="post_content" id="post-txt" class="form-control" rows="10"></textarea>
                             </div>
                         </div>
-
 
 
                         <!-- Add Task Button -->
