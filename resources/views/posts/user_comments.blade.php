@@ -51,7 +51,7 @@
 
                                 <div class="form-group row">
 
-                                    <div class=".col-xs-6">
+                                    <div class="col-xs-6">
                                         <textarea class="form-control" name="comments" id="comment-txt" cols="90"
                                                   rows="10" placeholder="Write comment here..."></textarea>
                                     </div>
