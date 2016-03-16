@@ -23,8 +23,7 @@
                                 <label for="post-name" class="col-sm-3 control-label">Post</label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" name="post_name" id="post-name" class="form-control"
-                                           value="{{ old('post') }}">
+                                    <input type="text" name="post_name" id="post-name" class="form-control" required value="{{ old('post') }}">
                                 </div>
                             </div>
                             <!--Post txt-->
@@ -32,7 +31,7 @@
                                 <label for="post-name" class="col-sm-3 control-label">Content</label>
 
                                 <div class="col-xs-9">
-                                        <textarea name="post_content" id="post-txt" class="form-control" rows="10"></textarea>
+                                        <textarea name="post_content" id="post-txt" class="form-control" rows="10" required></textarea>
                                 </div>
                             </div>
                             <!--Image-->
