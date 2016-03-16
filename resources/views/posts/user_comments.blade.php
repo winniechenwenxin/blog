@@ -60,7 +60,7 @@
                                 <!-- Add Task Button -->
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-default">
-                                        <i class="fa fa-btn fa-plus"></i>Comment
+                                        <i class="fa fa-btn fa-plus"></i>&nbsp;Comment
                                     </button>
                                 </div>
                             </form>
