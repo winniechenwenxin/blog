@@ -4,7 +4,7 @@
 
     <div class="page animsition">
         <div class="page-header">
-            <h1 class="page-title">Add New Posts</h1>
+            <h1 class="page-title">Add New Post</h1>
         </div>
 
         <div class="page-content">
@@ -37,12 +37,12 @@
                             </div>
                             <!--Image-->
                             <div class="form-group">
-                                <label for="colorpicker-rgb" class="col-sm-3 control-label">Event Image</label>
+                                <label for="post-photo" class="col-sm-3 control-label">Post Image</label>
 
                                 <div class="col-sm-9">
                                     <div class="input-group">
                                             <span class="input-group-btn">
-                                              <span class="btn btn-primary btn-file">
+                                              <span class="btn btn-outline btn-default btn-file">
                                                 <i class=""></i><input type="file" name="image" required accept="image/*"/>
                                               </span>
                                             </span>
@@ -56,7 +56,7 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-9">
                                     <button type="submit" class="btn btn-default">
-                                        <i class="fa fa-btn fa-plus"></i>Add Post
+                                        <i class="fa fa-btn fa-plus"></i>&nbsp;Add Post
                                     </button>
                                 </div>
                             </div>
