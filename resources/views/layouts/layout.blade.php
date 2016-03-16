@@ -110,6 +110,13 @@
                             <span class="site-menu-title">My Posts</span>
                         </a>
                     </li>
+
+                    <li class="site-menu-item">
+                        <a href="{{url('/post/add')}}">
+                            <i class="site-menu-icon wb-hammer" aria-hidden="true"></i>
+                            <span class="site-menu-title">Add Posts</span>
+                        </a>
+                    </li>
                 </ul>
 
 
