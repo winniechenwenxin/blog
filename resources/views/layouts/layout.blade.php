@@ -45,6 +45,8 @@
 
     <link rel="stylesheet" href="{{url('/vendors/remark/global/fonts/font-awesome/font-awesome.min.css?v2.1.0')}}">
 
+    @yield("stylesheet")
+
     <!--[if lt IE 9]>
     <script src="{{url('/vendors/remark/global/vendor/html5shiv/html5shiv.min.js')}}"></script>
     <![endif]-->
@@ -115,6 +117,27 @@
                         <a href="{{url('/post/add')}}">
                             <i class="site-menu-icon wb-hammer" aria-hidden="true"></i>
                             <span class="site-menu-title">Add Posts</span>
+                        </a>
+                    </li>
+
+
+                    <li class="site-menu-item">
+                        <a href="{{url('/post/photo')}}">
+                            <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+                            <span class="site-menu-title">Add Photos</span>
+                        </a>
+                    </li>
+
+                    <li class="site-menu-item">
+                        <a href="{{url('/post/datatable_easy')}}">
+                            <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+                            <span class="site-menu-title">Datatable</span>
+                        </a>
+                    </li>
+                    <li class="site-menu-item">
+                        <a href="{{url('/post/datatable_intermediate')}}">
+                            <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+                            <span class="site-menu-title">Datatable Hard</span>
                         </a>
                     </li>
                 </ul>
@@ -192,6 +215,7 @@
 
 <script src="{{url('/vendors/remark/base/assets/examples/js/apps/forum.min.js')}}"></script>
 
+@yield('javascript')
 
 <!-- Google Analytics -->
 <script>

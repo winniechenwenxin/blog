@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Clockwork\Support\Laravel\ClockworkServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
     ],
 

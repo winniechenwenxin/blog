@@ -8,11 +8,13 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Post;
+use App\Devices;
 use App\Repositories\PostRepository;
 use Illuminate\Support\Facades\Redirect;
 use Input;
 use Validator;
-use Response;//facade
+use Response;
+use Yajra\Datatables\Facades\Datatables;//facade
 
 
 class PostController extends Controller
@@ -131,6 +133,50 @@ class PostController extends Controller
 //            return Redirect::back()->with('message', 'Image uploaded successfully');
         }
 
+    }
+
+
+    public function getTable(Request $request)
+    {
+        $devices = Devices::all();
+        return view('posts.datatable_easy', ['devices' => $devices]);
+    }
+
+    public function getDeviceList(Request $request)
+    {
+        if($request->has('start')) {
+            $start = $request->get('start');
+        }else{
+            $start=0;
+        }
+//            $devices = Devices::skip($start)->take(20)->get();
+        $devices=Devices::all();
+
+        $responseData = [
+            "draw" => 2,
+            "recordsTotal" => count($devices),
+            "recordsFiltered" => 57,
+            "data" => $devices,
+        ];
+
+     //   return response()->json($responseData);
+      return view('posts.datatable_intermediate', ['devices' => $responseData]);
+    }
+
+    public function getDevices()
+    {
+        return view('posts.devices');
+    }
+
+    public function getDevicesData()
+    {
+        //$posts = Post::with('user');
+
+        //$devices = Devices::all();
+
+        return Datatables::of(Devices::query())
+            //->editColumn('device_model', '{!! strtoupper($device_model) !!}')
+            ->make(true);
     }
 
 }
